@@ -1,0 +1,12 @@
+type: object
+properties:
+  status:
+    description: Response status code
+    type: int
+    minLength: 3
+    example: 201
+  message:
+    description: Response message
+    type: string
+    minLength: 1
+    example: Created

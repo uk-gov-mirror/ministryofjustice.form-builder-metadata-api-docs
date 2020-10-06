@@ -1,0 +1,35 @@
+openapi: 3.0.2
+info:
+  version: 0.1.0
+  title: Form Builder Metadata API
+  # termsOfService: 'https://example.com/terms/'
+  contact:
+    email: form-builder-developers@digital.justice.gov.uk
+  x-logo:
+    url: 'https://raw.githubusercontent.com/ministryofjustice/fb-editor-console-electron/63a0d9a4cda23f361a1d52aa7af9400db29621ee/assets/images/govuk-crown.png'
+  description: >
+    # Introduction
+
+    This is the Form Builder Metadata API documentation.
+paths:
+  /services:
+    $ref: 'paths/services.yaml'
+  /services/{service_id}:
+    $ref: 'paths/services@{service_id}.yaml'
+components:
+  securitySchemes:
+    main_auth:
+      type: oauth2
+      flows:
+        implicit:
+          authorizationUrl: 'http://example.com/api/oauth/dialog'
+          scopes:
+            'read:users': read users info
+            'write:users': modify or remove users
+    api_key:
+      type: apiKey
+      in: header
+      name: api_key
+    basic_auth:
+      type: http
+      scheme: basic

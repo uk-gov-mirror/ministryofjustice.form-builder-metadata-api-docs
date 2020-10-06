@@ -1,0 +1,55 @@
+post:
+  tags:
+    - Services
+  summary: Create a Service
+  description: Creates a brand new service
+  operationId: services
+  security:
+    - jwt: []
+  responses:
+    '201':
+      description: Created
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/201.yaml
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/403.yaml
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/service_payload.yaml
+    required: true
+
+put:
+  tags:
+    - Services
+  summary: Update Service metadata
+  description: Updates metadata for a given Service ID with a new version
+  operationId: services
+  security:
+    - jwt: []
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/200.yaml
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/403.yaml
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/service_payload.yaml
+    required: true

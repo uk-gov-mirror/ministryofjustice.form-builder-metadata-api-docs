@@ -1,0 +1,14 @@
+type: object
+properties:
+  name:
+    description: User supplied name
+    type: string
+    minLength: 4
+    example: foo-bar
+  service_id:
+    description: The ID of the service
+    type: string
+    minLength: 1
+    example: 1234
+  metadata:
+    $ref: ./service.yaml
