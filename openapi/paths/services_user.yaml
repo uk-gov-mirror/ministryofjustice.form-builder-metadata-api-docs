@@ -3,7 +3,7 @@ get:
     - Services
   summary: Get Services for user
   description: Gets the Services for a given user ID
-  operationId: services
+  operationId: services-for-user
   parameters:
   - name: user_id
     in: path

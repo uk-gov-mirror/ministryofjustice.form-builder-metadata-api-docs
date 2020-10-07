@@ -3,7 +3,7 @@ post:
     - Services
   summary: Create a Service
   description: Creates a brand new service
-  operationId: services
+  operationId: create-service
   security:
     - jwt: []
   responses:
@@ -31,7 +31,7 @@ put:
     - Services
   summary: Update Service metadata
   description: Updates metadata for a given Service ID with a new version
-  operationId: services
+  operationId: update-service
   security:
     - jwt: []
   responses:

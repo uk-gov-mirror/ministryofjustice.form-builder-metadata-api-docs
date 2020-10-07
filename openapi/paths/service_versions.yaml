@@ -3,7 +3,7 @@ get:
     - Services
   summary: Get Service versions
   description: Gets all the versions for a Service ID
-  operationId: services
+  operationId: service-versions
   parameters:
   - name: service_id
     in: path

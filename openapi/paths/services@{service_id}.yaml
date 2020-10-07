@@ -3,7 +3,7 @@ get:
     - Services
   summary: Get latest Service metadata
   description: Gets the latest metadata for a given Service ID
-  operationId: services
+  operationId: latest-service-metadata
   parameters:
   - name: service_id
     in: path

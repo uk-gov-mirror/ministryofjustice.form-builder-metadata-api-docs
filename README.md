@@ -1,4 +1,6 @@
-# Form Builder Metadata OpenAPI Docs
+# Form Builder Metadata API Docs
+
+The API definitions for the Form Builder Metadata API.
 
 ## Working on your OpenAPI Definition
 
