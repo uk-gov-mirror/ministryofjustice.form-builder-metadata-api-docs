@@ -16,6 +16,8 @@ paths:
     $ref: 'paths/services.yaml'
   /services/{service_id}:
     $ref: 'paths/services@{service_id}.yaml'
+  /services/{service_id}/versions:
+    $ref: 'paths/service_versions.yaml'
 components:
   securitySchemes:
     main_auth:

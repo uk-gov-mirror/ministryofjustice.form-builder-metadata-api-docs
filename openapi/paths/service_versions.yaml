@@ -1,0 +1,49 @@
+get:
+  tags:
+    - Services
+  summary: Get Service versions
+  description: Gets all the versions for a Service ID
+  operationId: services
+  parameters:
+  - name: service_id
+    in: path
+    description: The Service ID that needs to be updated
+    required: true
+    schema:
+      type: string
+  security:
+    - jwt: []
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          type: object
+          example: {
+            service_name: foo-bar,
+            service_id: 1234,
+            versions: [
+              {
+                version_number: 2,
+                version_id: 5678,
+                created_at: '2020-10-01'
+              },
+              {
+                version_number: 1,
+                version_id: 1234,
+                created_at: '2020-01-01'
+              }
+            ]
+          }
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/403.yaml
+    '422':
+      description: Unprocessable Entity
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/422.yaml
