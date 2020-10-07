@@ -2,7 +2,7 @@ get:
   tags:
     - Services
   summary: Get Services for user
-  description: Gets the services for a given user
+  description: Gets the Services for a given user ID
   operationId: services
   parameters:
   - name: user_id

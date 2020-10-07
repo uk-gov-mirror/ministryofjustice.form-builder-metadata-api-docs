@@ -1,7 +1,7 @@
 get:
     tags:
       - Services
-    summary: Get specific version of a service
+    summary: Get specific version of a Service
     description: Gets a specific version for version ID from a Service ID
     operationId: services
     parameters:

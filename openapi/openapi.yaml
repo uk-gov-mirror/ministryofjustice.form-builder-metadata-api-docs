@@ -1,7 +1,7 @@
 openapi: 3.0.2
 info:
   version: 0.1.0
-  title: Form Builder Metadata API
+  title: Form Builder Metadata API Docs
   # termsOfService: 'https://example.com/terms/'
   contact:
     email: form-builder-developers@digital.justice.gov.uk
