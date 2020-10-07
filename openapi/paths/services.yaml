@@ -12,13 +12,13 @@ post:
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/201.yaml
-    '403':
-      description: Forbidden
+            $ref: ../components/responses/201.yaml
+    '401':
+      description: Authorisation information is missing or invalid
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/403.yaml
+            $ref: ../components/responses/401.yaml
   requestBody:
     content:
       application/json:
@@ -40,13 +40,13 @@ put:
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/200.yaml
-    '403':
-      description: Forbidden
+            $ref: ../components/responses/200.yaml
+    '401':
+      description: Authorisation information is missing or invalid
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/403.yaml
+            $ref: ../components/responses/401.yaml
   requestBody:
     content:
       application/json:

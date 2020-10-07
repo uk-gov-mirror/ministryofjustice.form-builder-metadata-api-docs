@@ -35,15 +35,15 @@ get:
               }
             ]
           }
-    '403':
-      description: Forbidden
+    '401':
+      description: Authorisation information is missing or invalid
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/403.yaml
+            $ref: ../components/responses/401.yaml
     '422':
       description: Unprocessable Entity
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/422.yaml
+            $ref: ../components/responses/422.yaml
