@@ -9,4 +9,4 @@ properties:
     description: Response message
     type: string
     minLength: 1
-    example: Missing Service ID
+    example: Missing Service ID or Version ID

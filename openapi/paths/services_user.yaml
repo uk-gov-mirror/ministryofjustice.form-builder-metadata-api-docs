@@ -1,0 +1,48 @@
+get:
+  tags:
+    - Services
+  summary: Get Services for user
+  description: Gets the services for a given user
+  operationId: services
+  parameters:
+  - name: user_id
+    in: path
+    description: The User ID
+    required: true
+    schema:
+      type: string
+  security:
+    - jwt: []
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          type: object
+          example: {
+            services: [
+              {
+                service_name: "basset",
+                service_id: 5678
+              },
+              {
+                service_name: "starwars",
+                service_id: 1234
+              }
+            ]
+          }
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/403.yaml
+    '422':
+      description: Unprocessable Entity
+      content:
+        application/json:
+          type: object
+          example: {
+            "status": 422,
+            "message": "Missing User ID"
+          }
