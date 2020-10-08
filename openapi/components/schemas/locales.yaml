@@ -1,0 +1,11 @@
+type: array
+description: Metadata for other languages
+items:
+  type: object
+  properties:
+    locale:
+      type: string
+    version_id:
+      type: string
+    version_number:
+      type: integer

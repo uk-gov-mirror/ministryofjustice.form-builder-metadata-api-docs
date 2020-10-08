@@ -1,0 +1,39 @@
+type: object
+description: The service modules
+properties:
+  _id:
+    type: string
+  _type:
+    type: string
+  modules:
+    type: array
+    description: Additional Service modules
+    items:
+      type: object
+      properties:
+        _id:
+          type: string
+        _type:
+          type: string
+        enabled:
+          type: sting
+        module:
+          type: string
+        title:
+          type: string
+required:
+  - _id
+  - _type
+example: {
+  "_id": "config.modules",
+  "_type": "config.modules",
+  "modules": [
+    {
+      "_id": "config.module.savereturn",
+      "_type": "config.module",
+      "enabled": "off",
+      "module": "savereturn",
+      "title": "Save and return"
+    }
+  ]
+}

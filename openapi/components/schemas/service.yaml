@@ -1,12 +1,41 @@
 type: object
+description: Service schema definition
 properties:
-  name:
-    description: User supplied name
+  configuration:
+    $ref: ./configuration.yaml
+  global:
+    $ref: ./global.yaml
+  modules:
+    $ref: ./modules.yaml
+  meta:
+    $ref: ./meta.yaml
+  standalone:
+    $ref: ./standalone.yaml
+  pages:
+    type: array
+    description: The non standalone pages of the Service
+    items:
+      $ref: ./page.yaml
+  locales:
+    type: array
+    description: Metadata for other languages
+    items:
+      $ref: ./locales.yaml
+  version_id:
+    description: Auto generated unique Hash id
     type: string
-    minLength: 4
-    example: foo-bar
+  version_number:
+    description: Auto increment unique number for each service
+    type: integer
   service_id:
-    description: The ID of the service
+    description: Service id
+    type: integer
+  created_at:
+    description: Date in ISO 8601 format
     type: string
-    minLength: 1
-    example: 1234
+  updated_at:
+    description: Date in ISO 8601 format
+    type: string
+required:
+  - configuration
+  - pages
