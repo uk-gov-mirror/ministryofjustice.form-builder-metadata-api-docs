@@ -12,7 +12,7 @@ get:
     schema:
       type: string
   - name: locale
-    in: path
+    in: query
     description: Optional. The locale of the metadata. Defaults to "en". Could be "cy"
     schema:
       type: string
