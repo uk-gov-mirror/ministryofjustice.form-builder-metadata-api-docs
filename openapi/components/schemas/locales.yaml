@@ -9,6 +9,10 @@ items:
       type: string
     version_number:
       type: integer
+  required:
+    - locale
+    - version_id
+    - version_number
 example: [
   {
     "local": "cy",

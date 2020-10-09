@@ -11,9 +11,9 @@ items:
       type: sting
     value:
       type: string
-required:
-  - _id
-  - _type
+  required:
+    - _id
+    - _type
 example: [
   {
     "_id": "upload.hint.maxsize",

@@ -1,5 +1,5 @@
 type: array
-description: Standalone pages for the Service
+description: The non standalone pages of the Service
 items:
   type: object
   properties:
@@ -47,10 +47,10 @@ items:
       type: string
     url:
       type: string
-required:
-  - _id
-  - _type
-  - url
+  required:
+    - _id
+    - _type
+    - url
 example: [
   {
     "_id": "page.start",

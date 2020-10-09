@@ -32,15 +32,9 @@ properties:
   standalone:
     $ref: ./standalone.yaml
   pages:
-    type: array
-    description: The non standalone pages of the Service
-    items:
-      $ref: ./page.yaml
+    $ref: ./page.yaml
   locales:
-    type: array
-    description: Metadata for other languages
-    items:
-      $ref: ./locales.yaml
+    $ref: ./locales.yaml
 required:
   - configuration
   - pages
