@@ -56,5 +56,5 @@ required:
   - pages
   - created_at
   - created_by
-  - update_at
+  - updated_at
   - updated_by

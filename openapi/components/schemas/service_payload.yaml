@@ -6,7 +6,7 @@ required:
   - metadata
 example: {
   metadata: {
-    "name": Service Name,
+    "service_name": Service Name,
     "created_at": "2020-10-09T11:51:46",
     "created_by": "1234",
     "updated_at": "2020-10-09T11:51:46",
