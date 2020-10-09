@@ -4,10 +4,11 @@ properties:
     description: User supplied name
     type: string
     minLength: 4
-    example: foo-bar
+    example: Service name
   locale:
     description: Defaults to en. Or could be "cy"
     type: string
+    example: en
   metadata:
     $ref: ./service.yaml
 required:

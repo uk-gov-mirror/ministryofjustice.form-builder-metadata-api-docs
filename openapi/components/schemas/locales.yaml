@@ -9,3 +9,10 @@ items:
       type: string
     version_number:
       type: integer
+example: [
+  {
+    "local": "cy",
+    "version_id": "1234",
+    "version_number": 1
+  }
+]
