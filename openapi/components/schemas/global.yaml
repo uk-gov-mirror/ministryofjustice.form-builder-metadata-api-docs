@@ -11,8 +11,6 @@ items:
       type: sting
     value:
       type: string
-    value:cy:
-      type: string
 required:
   - _id
   - _type
@@ -21,7 +19,6 @@ example: [
     "_id": "upload.hint.maxsize",
     "_type": "string",
     "description": "Text description",
-    "value": "Hello world",
-    "value:cy": "Helo byd"
+    "value": "Hello world"
   }
 ]
