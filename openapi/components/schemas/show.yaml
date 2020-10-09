@@ -1,0 +1,16 @@
+type: object
+description: "When page visibility is set to conditional pages"
+properties:
+  conditionsType:
+    type: string
+    enum: ["exactly", "all", "any"]
+  identifier:
+    type: string
+  operator:
+    type: string
+    enum: ["is", "defined", "startsWith", "endsWith", "includes", "match"]
+  negated:
+    description: "User chooses 'is not answered' or 'is not x' or 'does not starts with' or 'does not ends with' or 'does not include' or 'does not match' when setting visibility"
+    type: boolean
+  value:
+    type: string

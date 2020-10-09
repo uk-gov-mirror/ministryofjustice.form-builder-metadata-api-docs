@@ -1,0 +1,38 @@
+type: object
+description: Service configuration
+properties:
+  _id:
+    type: string
+  _type:
+    type: string
+  attachUserSubmission:
+    type: boolean
+  emailInputNameUser:
+    type: string
+  emailSubjectTeam:
+    type: string
+  emailSubjectUser:
+    type: string
+  name:
+    type: string
+  pdfHeading:
+    type: string
+  phase:
+    type: string
+  phaseText:
+    type: string
+required:
+  - _id
+  - _type
+example: {
+  _id: service,
+  _type: config.service,
+  attachUserSubmission: true,
+  emailInputNameUser: moj-online,
+  emailSubjectTeam: MoJ Online,
+  emailSubjectUser: MoJ Online,
+  name: Service Name,
+  pdfHeading: Service Name Submission,
+  phase: beta,
+  phaseText: This is a new Service.
+}

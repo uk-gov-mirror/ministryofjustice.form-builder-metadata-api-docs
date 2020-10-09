@@ -1,0 +1,28 @@
+type: array
+description: Standalone pages for the Service
+items:
+  type: object
+  properties:
+    _id:
+      type: string
+    _type:
+      type: string
+    body:
+      type: sting
+    heading:
+      type: string
+    url:
+      type: string
+required:
+  - _id
+  - _type
+  - url
+example: [
+  {
+    "_id": "page.accessibility",
+    "_type": "page.content",
+    "body": "A Jedi and a farm boy walk into a cantina . . .",
+    "heading": "Accessibility statement for this online form",
+    "url": "accessibility"
+  }
+]

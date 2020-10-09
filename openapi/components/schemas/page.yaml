@@ -1,0 +1,200 @@
+type: array
+description: Standalone pages for the Service
+items:
+  type: object
+  properties:
+    _id:
+      type: string
+    _type:
+      type: string
+    body:
+      type: sting
+    lede:
+      type: string
+    components:
+      type: array
+      items:
+        type: object
+        description: A component for a Service
+        properties:
+          _id:
+            type: string
+          _type:
+            type: string
+          errors:
+            type: object
+            properties:
+              required:
+                type: object
+                properties:
+                  any:
+                    type: string
+        required:
+          - _id
+          - _type
+    show:
+      oneOf:
+        - type: boolean
+          description: "When page visibility is set to true or false"
+        - $ref: ./show.yaml
+    steps:
+      type: array
+      items:
+        type: string
+    sendBody:
+      type: string
+    sendHeading:
+      type: string
+    url:
+      type: string
+required:
+  - _id
+  - _type
+  - url
+example: [
+  {
+    "_id": "page.start",
+    "_type": "page.start",
+    "body": "Blah blah",
+    "lede": "",
+    "steps": [
+      "page.person-details--2",
+      "page.email-address",
+      "page.pba-number",
+      "page.cop1",
+      "page.upload-cop1a",
+      "page.upload-cop3",
+      "page.upload-cop4",
+      "page.urgent-interim-order",
+      "page.upload-cop9",
+      "page.witness-statement-form",
+      "page.upload-cop-24",
+      "page.check-answers",
+      "page.application-sent"
+    ],
+    "url": "/"
+  },
+  {
+    "_id": "page.person-details--2",
+    "_type": "page.form",
+    "components": [
+      {
+        "_id": "page.person-details--2--text.auto_name__1",
+        "_type": "text",
+        "errors": {
+          "required": {
+            "any": "Enter the person's first name"
+          }
+        },
+        "label": "First name",
+        "name": "first-name"
+      },
+      {
+        "_id": "page.person-details--2--text.auto_name__2",
+        "_type": "text",
+        "errors": {
+          "required": {
+            "any": "Enter the person's last name"
+          }
+        },
+        "label": "Last name",
+        "name": "last-name"
+      }
+    ],
+    "heading": "The person you're applying to be a deputy for",
+    "lede": "The person who can't make decisions at the time they need to be made (they 'lack mental capacity').",
+    "show": {
+      "identifier": "auto_name__9",
+      "operator": "is",
+      "value": "Yes"
+    },
+    "url": "name"
+  },
+  {
+    "_id": "page.upload-cop1a",
+    "_type": "page.singlequestion",
+    "components": [
+      {
+        "_id": "page.upload-cop1a--upload.auto_name__1",
+        "_type": "upload",
+        "errors": {
+          "required": {
+            "any": "Select your completed supporting information (COP1A)"
+          }
+        },
+        "hint": "",
+        "label": "Upload your completed supporting information (COP1A)",
+        "name": "upload-cop1a"
+      }
+    ],
+    "steps": [
+      "page.upload-cop1a-check"
+    ],
+    "url": "upload-cop1a"
+  },
+  {
+    "_id": "page.upload-cop1a-check",
+    "_type": "page.uploadCheck",
+    "heading": "Check your completed supporting information (COP1A) upload",
+    "show": {
+      "conditionsType": "exactly",
+      "exactly": [
+        {
+          "all": [
+            {
+              "any": [
+                {
+                  "identifier": "auto_name__37",
+                  "operator": "defined"
+                },
+                {
+                  "identifier": "auto_name__27",
+                  "operator": "defined"
+                },
+                {
+                  "identifier": "auto_name__30",
+                  "operator": "defined"
+                }
+              ],
+              "conditionsType": "any"
+            },
+            {
+              "identifier": "auto_name__15",
+              "operator": "is",
+              "value": "auto_value__2"
+            }
+          ],
+          "conditionsType": "all"
+        },
+        {
+          "all": [
+            {
+              "identifier": "auto_name__37",
+              "negated": true,
+              "operator": "defined"
+            },
+            {
+              "identifier": "auto_name__27",
+              "negated": true,
+              "operator": "defined"
+            },
+            {
+              "identifier": "auto_name__30",
+              "negated": true,
+              "operator": "defined"
+            }
+          ]
+        }
+      ]
+    },
+    "url": "/check-cop1a"
+  },
+  {
+    "_id": "page.check-answers",
+    "_type": "page.summary",
+    "sendBody": "Something something something dark side",
+    "sendHeading": "Send your application",
+    "show": true,
+    "url": "check-answers"
+  }
+]

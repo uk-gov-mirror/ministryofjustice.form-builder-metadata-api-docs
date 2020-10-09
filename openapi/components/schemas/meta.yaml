@@ -1,0 +1,39 @@
+type: object
+description: The service meta
+properties:
+  _id:
+    type: string
+  _type:
+    type: string
+  items:
+    type: array
+    description: Service meta objects
+    items:
+      type: object
+      properties:
+        _id:
+          type: string
+        _type:
+          type: string
+        href:
+          type: sting
+        test:
+          type: string
+      required:
+        - _id
+        - _type
+required:
+  - _id
+  - _type
+example: {
+  "_id": "config.meta",
+  "_type": "config.meta",
+  "items": [
+    {
+      "_id": "config.meta--link--3",
+      "_type": "link",
+      "href": "/accessibility",
+      "text": "Accessibility"
+    }
+  ]
+}
