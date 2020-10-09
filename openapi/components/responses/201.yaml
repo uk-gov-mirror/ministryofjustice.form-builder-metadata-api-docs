@@ -1,12 +1,26 @@
 type: object
 properties:
-  status:
-    description: Response status code
-    type: string
-    minLength: 3
-    example: 201
-  message:
-    description: Response message
-    type: string
-    minLength: 1
-    example: Created
+  metadata:
+    $ref: ../schemas/service.yaml
+example: {
+  metadata: {
+    "service_id": "1234",
+    "name": Service Name,
+    "version_id": "5678",
+    "version_number": 1,
+    "created_at": "2020-10-09T11:51:46",
+    "created_by": "1234",
+    "configuration": {
+      _id: service,
+      _type: config.service
+    },
+    "pages": [
+      {
+        "_id": "page.start",
+        "_type": "page.start",
+        "url": "/"
+      }
+    ],
+    "locale": "en"
+  }
+}

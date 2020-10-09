@@ -13,8 +13,6 @@ properties:
     type: string
   emailSubjectUser:
     type: string
-  name:
-    type: string
   pdfHeading:
     type: string
   phase:
@@ -31,7 +29,6 @@ example: {
   emailInputNameUser: moj-online,
   emailSubjectTeam: MoJ Online,
   emailSubjectUser: MoJ Online,
-  name: Service Name,
   pdfHeading: Service Name Submission,
   phase: beta,
   phaseText: This is a new Service.

@@ -1,16 +1,26 @@
 type: object
 properties:
-  service_name:
-    description: User supplied name
-    type: string
-    minLength: 4
-    example: Service name
-  locale:
-    description: Defaults to en. Or could be "cy"
-    type: string
-    example: en
   metadata:
     $ref: ./service.yaml
 required:
   - service_name
   - metadata
+example: {
+  metadata: {
+    "name": Service Name,
+    "created_at": "2020-10-09T11:51:46",
+    "created_by": "1234",
+    "configuration": {
+      _id: service,
+      _type: config.service
+    },
+    "pages": [
+      {
+        "_id": "page.start",
+        "_type": "page.start",
+        "url": "/"
+      }
+    ],
+    "locale": en
+  }
+}

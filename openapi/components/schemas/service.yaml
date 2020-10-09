@@ -5,6 +5,10 @@ properties:
     description: Service id
     type: integer
     example: "1234"
+  service_name:
+    description: The name of the service
+    type: string
+    example: Service Name
   version_id:
     description: Auto generated unique Hash id
     type: string
@@ -41,6 +45,10 @@ properties:
     $ref: ./standalone.yaml
   pages:
     $ref: ./page.yaml
+  locale:
+    description: The locale of the current Service version
+    type: string
+    example: en
   locales:
     $ref: ./locales.yaml
 required:
