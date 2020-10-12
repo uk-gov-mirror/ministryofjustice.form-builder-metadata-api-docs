@@ -18,7 +18,7 @@ get:
       schema:
           type: string
     - name: locale
-      in: path
+      in: query
       description: Optional. The locale of the metadata. Defaults to "en". Could be "cy"
       schema:
         type: string
@@ -37,6 +37,12 @@ get:
           application/json:
             schema:
               $ref: ../components/responses/401.yaml
+      '404':
+        description: Requested Service or Version not found
+        content:
+          application/json:
+            schema:
+              $ref: ../components/responses/404.yaml
       '422':
         description: Unprocessable Entity
         content:

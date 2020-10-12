@@ -1,0 +1,12 @@
+type: object
+properties:
+  status:
+    description: Response status code
+    type: string
+    minLength: 3
+    example: 404
+  message:
+    description: Response message
+    type: string
+    minLength: 1
+    example: Requested Service not found
