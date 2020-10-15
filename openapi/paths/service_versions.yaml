@@ -29,12 +29,10 @@ get:
             service_id: 1234,
             versions: [
               {
-                version_number: 2,
                 version_id: 5678,
                 created_at: '2020-10-01'
               },
               {
-                version_number: 1,
                 version_id: 1234,
                 created_at: '2020-01-01'
               }

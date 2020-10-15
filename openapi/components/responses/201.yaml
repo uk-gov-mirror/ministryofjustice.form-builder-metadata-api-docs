@@ -7,7 +7,6 @@ example: {
     "service_id": "1234",
     "service_name": Service Name,
     "version_id": "5678",
-    "version_number": 1,
     "created_at": "2020-10-09T11:51:46",
     "created_by": "1234",
     "configuration": {

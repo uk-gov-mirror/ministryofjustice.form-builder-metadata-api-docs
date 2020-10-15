@@ -13,10 +13,6 @@ properties:
     description: Auto generated unique Hash id
     type: string
     example: "1234"
-  version_number:
-    description: Auto increment unique number for each service
-    type: integer
-    example: 1
   created_at:
     description: Date in ISO 8601 format
     type: string
