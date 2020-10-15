@@ -17,18 +17,10 @@ properties:
     description: Date in ISO 8601 format
     type: string
     example: "2020-10-09T11:51:46"
-  updated_at:
-    description: Date in ISO 8601 format
-    type: string
-    example: "2020-10-09T11:51:46"
   created_by:
     description: The ID of the User that created the Service
     type: string
     example: 4634ec01-5618-45ec-a4e2-bb5aa587e751
-  updated_by:
-    description: The ID of the User that last updated the Service
-    type: string
-    example: "5678"
   configuration:
     $ref: ./configuration.yaml
   global:
@@ -52,5 +44,3 @@ required:
   - pages
   - created_at
   - created_by
-  - updated_at
-  - updated_by
