@@ -4,7 +4,7 @@ properties:
   service_id:
     description: Service id
     type: integer
-    example: "1234"
+    example: 634aa3d5-a3b3-4d0f-9078-bb754542a1d3
   service_name:
     description: The name of the service
     type: string
@@ -12,7 +12,7 @@ properties:
   version_id:
     description: Auto generated unique Hash id
     type: string
-    example: "1234"
+    example: ac4b45c5-071e-4d07-b5a2-9f0196a5b267
   created_at:
     description: Date in ISO 8601 format
     type: string
@@ -24,7 +24,7 @@ properties:
   created_by:
     description: The ID of the User that created the Service
     type: string
-    example: "1234"
+    example: 4634ec01-5618-45ec-a4e2-bb5aa587e751
   updated_by:
     description: The ID of the User that last updated the Service
     type: string
