@@ -1,3 +1,49 @@
+post:
+  tags:
+    - Services
+  summary: Create a new Service metadata version
+  description: Updates metadata for a given Service ID with a new version
+  operationId: create-service-version
+  parameters:
+  - name: service_id
+    in: path
+    description: The Service ID that needs to be updated
+    required: true
+    schema:
+      type: string
+  - name: locale
+    in: query
+    description: Optional. The locale of the metadata. Defaults to "en". Could be "cy"
+    schema:
+      type: string
+  security:
+    - jwt: []
+  responses:
+    '201':
+      description: Created
+      content:
+        application/json:
+          schema:
+            $ref: ../components/responses/201.yaml
+    '401':
+      description: Authorisation information is missing or invalid
+      content:
+        application/json:
+          schema:
+            $ref: ../components/responses/401.yaml
+    '422':
+      description: Unprocessable Entity
+      content:
+        application/json:
+          schema:
+            $ref: ../components/responses/422.yaml
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/service_payload.yaml
+    required: true
+
 get:
   tags:
     - Services
@@ -50,9 +96,3 @@ get:
         application/json:
           schema:
             $ref: ../components/responses/404.yaml
-    '422':
-      description: Unprocessable Entity
-      content:
-        application/json:
-          schema:
-            $ref: ../components/responses/422.yaml

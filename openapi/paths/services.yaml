@@ -19,34 +19,12 @@ post:
         application/json:
           schema:
             $ref: ../components/responses/401.yaml
-  requestBody:
-    content:
-      application/json:
-        schema:
-          $ref: ../components/schemas/service_payload.yaml
-    required: true
-
-put:
-  tags:
-    - Services
-  summary: Update Service metadata
-  description: Updates metadata for a given Service ID with a new version
-  operationId: update-service
-  security:
-    - jwt: []
-  responses:
-    '200':
-      description: OK
+    '422':
+      description: Unprocessable Entity
       content:
         application/json:
           schema:
-            $ref: ../components/responses/200.yaml
-    '401':
-      description: Authorisation information is missing or invalid
-      content:
-        application/json:
-          schema:
-            $ref: ../components/responses/401.yaml
+            $ref: ../components/responses/422.yaml
   requestBody:
     content:
       application/json:

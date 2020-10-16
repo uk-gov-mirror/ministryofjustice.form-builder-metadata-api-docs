@@ -37,9 +37,3 @@ get:
         application/json:
           schema:
             $ref: ../components/responses/404.yaml
-    '422':
-      description: Unprocessable Entity
-      content:
-        application/json:
-          schema:
-            $ref: ../components/responses/422.yaml
