@@ -1,12 +1,16 @@
 type: object
+description: The error messages that are returned for unprocessable entities
 properties:
-  status:
-    description: Response status code
-    type: string
-    minLength: 3
-    example: 422
   message:
     description: Response message
-    type: string
-    minLength: 1
-    example: Missing Service ID or Version ID
+    type: array
+    items:
+      type: string
+      minLength: 1
+      example: Service name or created by cannot be blank
+example: {
+  message: [
+    'Service name cannot be blank',
+    'Created by cannot be blank'
+  ]
+}

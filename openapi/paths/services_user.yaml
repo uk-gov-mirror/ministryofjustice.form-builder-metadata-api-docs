@@ -37,12 +37,3 @@ get:
         application/json:
           schema:
             $ref: ../components/responses/401.yaml
-    '422':
-      description: Unprocessable Entity
-      content:
-        application/json:
-          type: object
-          example: {
-            "status": 422,
-            "message": "Missing User ID"
-          }
