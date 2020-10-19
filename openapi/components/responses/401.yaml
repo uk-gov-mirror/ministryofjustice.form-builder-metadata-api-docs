@@ -1,12 +1,15 @@
 type: object
+description: The response when some authorisation information is missing or invalid
 properties:
-  status:
-    description: Response status code
-    type: string
-    minLength: 3
-    example: 401
   message:
     description: Response message
-    type: string
-    minLength: 1
-    example: Authorisation information is missing or invalid
+    type: array
+    items:
+      type: string
+      minLength: 1
+      example: Authorisation information is missing or invalid
+example: {
+  message: [
+    'Authorisation information is missing or invalid'
+  ]
+}
