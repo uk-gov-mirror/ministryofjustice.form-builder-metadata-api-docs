@@ -1,12 +1,16 @@
 type: object
+description: The error message returned for a Service that is not found
 properties:
-  status:
-    description: Response status code
-    type: string
-    minLength: 3
-    example: 404
   message:
     description: Response message
-    type: string
-    minLength: 1
-    example: Requested Service not found
+    type: array
+    items:
+      type: string
+      minLength: 1
+      example: Requested Service not found
+example: {
+  message: [
+    'Requested Service not found',
+    'Requested Version not found'
+  ]
+}

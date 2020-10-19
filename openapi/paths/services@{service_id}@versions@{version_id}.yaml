@@ -17,11 +17,6 @@ get:
     required: true
     schema:
         type: string
-  - name: locale
-    in: query
-    description: Optional. The locale of the metadata. Defaults to "en". Could be "cy"
-    schema:
-      type: string
   security:
     - jwt: []
   responses:
