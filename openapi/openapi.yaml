@@ -20,8 +20,8 @@ paths:
     $ref: 'paths/services@{service_id}@versions@latest.yaml'
   /services/{service_id}/versions/{version_id}:
     $ref: 'paths/services@{service_id}@versions@{version_id}.yaml'
-  /services/user/{user_id}:
-    $ref: 'paths/services@user@{user_id}.yaml'
+  /services/users/{user_id}:
+    $ref: 'paths/services@users@{user_id}.yaml'
 components:
   securitySchemes:
     jwt:
