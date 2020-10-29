@@ -1,7 +1,13 @@
 type: object
 properties:
-  message:
-    description: Response message
-    type: string
-    minLength: 1
-    example: New version created
+  $ref: ../schemas/service.yaml
+example: {
+  "service_id": "634aa3d5-a3b3-4d0f-9078-bb754542a1d3",
+  "service_name": Service Name,
+  "version_id": "ac4b45c5-071e-4d07-b5a2-9f0196a5b267",
+  "created_at": "2020-10-09T11:51:46",
+  "created_by": "4634ec01-5618-45ec-a4e2-bb5aa587e751",
+  "configuration": {},
+  "pages": [],
+  "locale": "en"
+}
