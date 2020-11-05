@@ -3,7 +3,7 @@ description: Service schema definition
 properties:
   service_id:
     description: Service id
-    type: integer
+    type: string
     example: 634aa3d5-a3b3-4d0f-9078-bb754542a1d3
   service_name:
     description: The name of the service
