@@ -1,6 +1,6 @@
 openapi: 3.0.2
 info:
-  version: 0.1.0
+  version: 1.0.0
   title: MoJ Online Form Builder Metadata API Docs
   contact:
     email: form-builder-developers@digital.justice.gov.uk
