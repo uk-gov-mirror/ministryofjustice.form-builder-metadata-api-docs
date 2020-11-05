@@ -1,6 +1,33 @@
 type: object
 properties:
-  $ref: ../schemas/service.yaml
+  service_id:
+    description: Service id
+    type: string
+    example: 634aa3d5-a3b3-4d0f-9078-bb754542a1d3
+  service_name:
+    description: The name of the service
+    type: string
+    example: Service Name
+  version_id:
+    description: Auto generated unique Hash id
+    type: string
+    example: ac4b45c5-071e-4d07-b5a2-9f0196a5b267
+  created_at:
+    description: Date in ISO 8601 format
+    type: string
+    example: "2020-10-09T11:51:46"
+  created_by:
+    description: The ID of the User that created the Service
+    type: string
+    example: 4634ec01-5618-45ec-a4e2-bb5aa587e751
+  configuration:
+    $ref: ../schemas/configuration.yaml
+  pages:
+    $ref: ../schemas/page.yaml
+  locale:
+    description: The locale of the current Service version
+    type: string
+    example: en
 example: {
   "service_id": "634aa3d5-a3b3-4d0f-9078-bb754542a1d3",
   "service_name": Service Name,

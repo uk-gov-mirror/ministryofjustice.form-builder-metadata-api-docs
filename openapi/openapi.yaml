@@ -1,8 +1,7 @@
 openapi: 3.0.2
 info:
-  version: 0.1.0
-  title: Form Builder Metadata API Docs
-  # termsOfService: 'https://example.com/terms/'
+  version: 1.0.0
+  title: MoJ Online Form Builder Metadata API Docs
   contact:
     email: form-builder-developers@digital.justice.gov.uk
   x-logo:
@@ -10,7 +9,19 @@ info:
   description: >
     # Introduction
 
-    This is the Form Builder Metadata API documentation.
+    >
+      This is the Form Builder Metadata API documentation.
+
+    >
+      The application is responsible for storing and serving metadata versions for all the services
+    created by the MoJ Online Form Builder tool.
+
+    >
+      The code repository [can be found here](https://github.com/ministryofjustice/fb-metadata-api).
+
+    >
+      In order to interact with the API each request must have a JWT bearer token in the Authorizaion
+    header signed by a private key.
 paths:
   /services:
     $ref: 'paths/services.yaml'

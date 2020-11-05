@@ -18,19 +18,8 @@ get:
       description: OK
       content:
         application/json:
-          type: object
-          example: {
-            services: [
-              {
-                service_name: "basset",
-                service_id: "634aa3d5-a3b3-4d0f-9078-bb754542a1d3"
-              },
-              {
-                service_name: "starwars",
-                service_id: "634aa3d5-a3b3-4d0f-9078-bb754542a1d3"
-              }
-            ]
-          }
+          schema:
+            $ref: ../components/responses/200_user_versions.yaml
     '401':
       description: Authorisation information is missing or invalid
       content:

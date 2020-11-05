@@ -1,0 +1,24 @@
+type: object
+properties:
+  services:
+    description: Services for a given user
+    type: array
+    items:
+      type: object
+      properties:
+        service_id:
+          type: string
+        service_name:
+          type: string
+example: {
+  "services": [
+    {
+      "service_name": "basset",
+      "service_id": "634aa3d5-a3b3-4d0f-9078-bb754542a1d3"
+    },
+    {
+      "service_name": "starwars",
+      "service_id": "634aa3d5-a3b3-4d0f-9078-bb7545423d1a"
+    }
+  ]
+}
