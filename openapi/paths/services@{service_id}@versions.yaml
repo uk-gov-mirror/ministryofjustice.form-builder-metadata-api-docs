@@ -24,7 +24,7 @@ post:
       content:
         application/json:
           schema:
-            $ref: ../components/responses/201.yaml
+            $ref: ../components/schemas/service.yaml
     '401':
       description: Authorisation information is missing or invalid
       content:
@@ -69,21 +69,8 @@ get:
       description: OK
       content:
         application/json:
-          type: object
-          example: {
-            service_name: Service Name,
-            service_id: "634aa3d5-a3b3-4d0f-9078-bb754542a1d3",
-            versions: [
-              {
-                version_id: "ac4b45c5-071e-4d07-b5a2-9f0196a5b267",
-                created_at: '2020-10-01'
-              },
-              {
-                version_id: "06d18901-f0e2-409a-b2db-e323ce1a16db",
-                created_at: '2020-01-01'
-              }
-            ]
-          }
+          schema:
+            $ref: ../components/responses/200_versions.yaml
     '401':
       description: Authorisation information is missing or invalid
       content:
