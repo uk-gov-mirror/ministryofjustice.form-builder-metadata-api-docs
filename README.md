@@ -208,7 +208,7 @@ get:
             type: array
             items:
               $ref: ../components/schemas/Customer.yaml
-    '401':
+    '403':
       $ref: ../components/responses/AccessForbidden.yaml
   x-code-samples:
     - lang: PHP
@@ -225,7 +225,7 @@ post:
   responses:
     '201':
       $ref: ../components/responses/Customer.yaml
-    '401':
+    '403':
       $ref: ../components/responses/AccessForbidden.yaml
     '409':
       $ref: ../components/responses/Conflict.yaml

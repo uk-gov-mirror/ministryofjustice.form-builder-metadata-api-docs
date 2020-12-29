@@ -20,9 +20,9 @@ get:
         application/json:
           schema:
             $ref: ../components/responses/200_user_versions.yaml
-    '401':
-      description: Authorisation information is missing or invalid
+    '403':
+      description: Not permitted to perform operation
       content:
         application/json:
           schema:
-            $ref: ../components/responses/401.yaml
+            $ref: ../components/responses/403.yaml
