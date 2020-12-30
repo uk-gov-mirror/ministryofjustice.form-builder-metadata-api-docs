@@ -25,12 +25,12 @@ get:
         application/json:
           schema:
             $ref: ../components/schemas/service.yaml
-    '401':
-      description: Authorisation information is missing or invalid
+    '403':
+      description: Not permitted to perform operation
       content:
         application/json:
           schema:
-            $ref: ../components/responses/401.yaml
+            $ref: ../components/responses/403.yaml
     '404':
       description: Requested Service or Version not found
       content:
