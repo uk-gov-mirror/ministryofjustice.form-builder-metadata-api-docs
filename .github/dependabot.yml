@@ -10,7 +10,6 @@ updates:
   reviewers:
   - mattempty
   - form-builder-developers
-  - tomas-stefano
   - brenetic
   ignore:
   - dependency-name: redoc-cli
