@@ -4,7 +4,7 @@
   "dependencies": {
     "@redocly/openapi-cli": "^1.0.0-beta.95",
     "react": "^17.0.2",
-    "redoc-cli": "^0.13.16"
+    "redoc-cli": "^0.13.20"
   },
   "private": true,
   "scripts": {
